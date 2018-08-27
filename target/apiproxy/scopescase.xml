@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="scopescase">
+    <Basepaths>/scopescase</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1535395178919</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>scopescase</DisplayName>
+    <LastModifiedAt>1535396365929</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:6c0ba43c5aa670069fdbe482696795d3ebe0ac3cb524a2dca091db5a713d8e2cd048bc96e55fe3399701e9bba5e53c32b3efbc0cfdbdd4fb43602e7dad1ba00b</ManifestVersion>
+    <Policies>
+        <Policy>AssignMessage.SetPayload</Policy>
+        <Policy>impose-quota</Policy>
+        <Policy>remove-header-authorization</Policy>
+        <Policy>verify-oauth-v2-access-token</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

@@ -1,0 +1,16 @@
+[
+
+  {
+    "john.doe@acme.com": [{
+      "apiProducts" : [ "scopescase-Product" ],
+      "name" : "ScopesCaseReadWriteApp",
+      "scopes": []
+    }]
+  },
+  {
+    "john.doe@acme.com": [{
+      "apiProducts" : [ "scopescase-Product-ReadOnly" ],
+      "name" : "ScopesCaseReadOnlyApp",
+      "scopes": []
+    }]
+  }

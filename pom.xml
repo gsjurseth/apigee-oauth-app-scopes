@@ -286,18 +286,6 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>run-unit-tests</id>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<phase>process-sources</phase>
-						<configuration>
-							<executable>node</executable>
-							<workingDirectory>test/unit</workingDirectory>
-							<commandlineArgs>./node_modules/jest/bin/jest --notify --config=config.json</commandlineArgs>
-						</configuration>
-					</execution>
-					<execution>
 						<id>install-node-app-node-packages</id>
 						<goals>
 							<goal>exec</goal>

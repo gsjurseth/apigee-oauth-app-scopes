@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignMessage.SetPayload" version="SHA-512:cc02f0d5ea9991ad9211da246c6e15cb33030b2fd1568911207c5eb6ef5cc7c8e033ae81260a24d44c882b3c1a2f1c7c093461e599c22e31d53a9150d1ecfd4f"/>
+        <VersionInfo resourceName="impose-quota" version="SHA-512:34215257012fa998b2b8210bcf0348ac20f041dc2f15b3db9bd9d2830cb2d0df59e58cefa4dfa3db1359c273fec2fa41697599c446912eaaec3ef0d9835df99e"/>
+        <VersionInfo resourceName="remove-header-authorization" version="SHA-512:bb51e553b4b66ee4313fbfc0eaa76f08f3db66f9bd05cce9a1dc6542bada0501291719372fb4468a0b7f85ecceaaf0f8a0a397560a14b05f32e87d95423befb7"/>
+        <VersionInfo resourceName="verify-oauth-v2-access-token" version="SHA-512:be186ad133f93aafcac3d31bcb907dc849e4d8d10dadc63132cec9986bb306f937d7e9786a40be6ba66e04f4239189c3197d9df3c0ccbb30d79b4bd70231894e"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:ad83f674c79cfba0293d3473fbb48af18c83c0e83e194e73a443d07fc275aaa225e97efdfa7cbd981e38e6dd3e7183708f8311f447fec4a21565be953362d8b9"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>
