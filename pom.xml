@@ -148,7 +148,7 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>create-config-app</id>
+						<id>create-config-apps</id>
 						<phase>install</phase>                        
 						<goals>
 							<goal>apps</goal>

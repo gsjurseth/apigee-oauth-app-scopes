@@ -5,17 +5,17 @@
     "attributes" : [  ],
     "createdAt" : 1535395179323,
     "createdBy" : "gsjurseth@google.com",
-    "description" : "scopescase-Product for both read and Write",
-    "displayName" : "scopescase-Product-ReadWrite",
+    "description" : "scopecase-Product for both read and Write",
+    "displayName" : "scopecase-Product-ReadWrite",
     "environments" : [ "prod", "test"  ],
     "lastModifiedAt" : 1535396902694,
     "lastModifiedBy" : "gsjurseth@google.com",
-    "name" : "scopescase-Product",
-    "proxies" : [ "apigee-scopescase"  ],
+    "name" : "scopecase-Product",
+    "proxies" : [ "apigee-scopecase"  ],
     "quota" : "5",
     "quotaInterval" : "1",
     "quotaTimeUnit" : "minute",
-    "scopes" : [ "urn:scopescase:read", "urn:scopescase:write"  ]
+    "scopes" : [ "urn:scopecase:read", "urn:scopecase:write"  ]
   },
   {
     "apiResources" : [ "/", "/**"  ],
@@ -23,16 +23,16 @@
     "attributes" : [  ],
     "createdAt" : 1535395179323,
     "createdBy" : "gsjurseth@google.com",
-    "description" : "scopescase-Product for read only",
-    "displayName" : "scopescase-Product-ReadOnly",
+    "description" : "scopecase-Product for read only",
+    "displayName" : "scopecase-Product-ReadOnly",
     "environments" : [ "prod", "test"  ],
     "lastModifiedAt" : 1535396902694,
     "lastModifiedBy" : "gsjurseth@google.com",
-    "name" : "scopescase-ProductReadOnly",
-    "proxies" : [ "apigee-scopescase"  ],
+    "name" : "scopecase-ProductReadOnly",
+    "proxies" : [ "apigee-scopecase"  ],
     "quota" : "5",
     "quotaInterval" : "1",
     "quotaTimeUnit" : "minute",
-    "scopes" : [ "urn:scopescase:read" ]
+    "scopes" : [ "urn:scopecase:read" ]
   }
 ]
