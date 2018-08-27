@@ -1,0 +1,787 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Book API (V1) Tests",
+    "line": 1,
+    "id": "book-api-(v1)-tests",
+    "tags": [],
+    "uri": "features/scope-test.feature",
+    "elements": [
+      {
+        "id": "book-api-(v1)-tests;get-books---success",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Get Books - Success",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I GET /books?apikey=`consumerKey`",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 7000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 200\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:29 GMT\n      content-type:   application/json\n      content-length: 175\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "response body path $.[0].id should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;get-books---unauthorized",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Get Books - Unauthorized",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I GET /books",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 189000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "response code should be 401",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 401\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:29 GMT\n      content-type:   application/json\n      content-length: 175\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "response body path $.code should be 401.01.001",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "response body path $.message should be Unauthorized",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "response body path $.info should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;search-books---success",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Search Books - Success",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I GET /books/search?apikey=`consumerKey`&q=War",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 165000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 200\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:29 GMT\n      content-type:   application/json\n      content-length: 183\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\\/search\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "response body path $.[0].title should be ^(.*[wW][Aa][rR].*)$",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;search-books---unauthorized",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Search Books - Unauthorized",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I GET /books/search?q=War",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "response code should be 401",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 401\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:29 GMT\n      content-type:   application/json\n      content-length: 183\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\\/search\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "response body path $.code should be 401.01.001",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "response body path $.message should be Unauthorized",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "response body path $.info should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;search-books---missing-search-term",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Search Books - Missing Search Term",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I GET /books/search?apikey=`consumerKey`",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "response code should be 400",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 400\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:29 GMT\n      content-type:   application/json\n      content-length: 183\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\\/search\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "response body path $.code should be 400.01.001",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "response body path $.message should be Missing search term",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "response body path $.info should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;get-book-by-id---success",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Get Book By Id - Success",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I GET /books/121b4bb3-c971-4080-b230-571148b71969?apikey=`consumerKey`",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 200\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:30 GMT\n      content-type:   application/json\n      content-length: 213\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\\/121b4bb3-c971-4080-b230-571148b71969\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "response body path $.id should be 121b4bb3-c971-4080-b230-571148b71969",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;get-book-by-id---unauthorized",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Get Book By Id - Unauthorized",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I GET /books/121b4bb3-c971-4080-b230-571148b71969",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "response code should be 401",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 401\n  actual:   404\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:30 GMT\n      content-type:   application/json\n      content-length: 213\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/books\\/121b4bb3-c971-4080-b230-571148b71969\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "response body path $.code should be 401.01.001",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "response body path $.message should be Unauthorized",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "response body path $.info should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "book-api-(v1)-tests;resource-not-found",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Resource Not Found",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:30"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 62,
+            "name": "I GET /other?apikey=`consumerKey`",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 331000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "response code should be 404",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:161"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "response body path $.code should be 404.01.001",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 8000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 404.01.001\n  actual:   null\n  response: \n    statusCode: 404\n    headers: \n      date:           Mon, 27 Aug 2018 20:55:30 GMT\n      content-type:   application/json\n      content-length: 175\n      connection:     close\n    body:       {\"fault\":{\"faultstring\":\"Unable to identify proxy for host: secure and url: \\/scopecase\\/v1\\/other\",\"detail\":{\"errorcode\":\"messaging.adaptors.http.flow.ApplicationNotFound\"}}}\n    at Function.<anonymous> (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:689:18)\n    at Async._drainQueue (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:133:16)\n    at Async._drainQueues (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:143:10)\n    at Immediate.Async.drainQueues [as _onImmediate] (/home/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:696:18)\n    at tryOnImmediate (timers.js:667:5)\n    at processImmediate (timers.js:649:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "response body path $.message should be Resource not found",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "response body path $.info should be (.+)",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:194"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
