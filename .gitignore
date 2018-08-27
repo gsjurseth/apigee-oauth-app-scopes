@@ -64,3 +64,5 @@ typings/
 target/**
 
 devAppKeys.json
+
+package-lock.json
