@@ -208,8 +208,6 @@
 									def appDetails = keys.find { it.name == appName }
 									project.properties.setProperty('test.readWriteconsumerKey', appDetails.credentials[0].consumerKey)
 									project.properties.setProperty('test.readWriteconsumerSecret', appDetails.credentials[0].consumerSecret)
-									project.properties.setProperty('test.readOnlyconsumerKey', appDetails.credentials[1].consumerKey)
-									project.properties.setProperty('test.readOnlyconsumerSecret', appDetails.credentials[1].consumerSecret)
 								]]>
             					</script>
           					</scripts>
