@@ -43,7 +43,7 @@
         </Flow>
     </Flows>
     <HTTPProxyConnection>
-        <BasePath>/scopescase</BasePath>
+        <BasePath>/scopecase</BasePath>
         <Properties/>
         <VirtualHost>default</VirtualHost>
         <VirtualHost>secure</VirtualHost>

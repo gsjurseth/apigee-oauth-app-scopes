@@ -18,7 +18,7 @@
     "scopes" : [ "urn:scopecase:read", "urn:scopecase:write"  ]
   },
   {
-    "apiResources" : [ "/", "/**"  ],
+    "apiResources" : [ "/read"  ],
     "approvalType" : "auto",
     "attributes" : [  ],
     "createdAt" : 1535395179323,

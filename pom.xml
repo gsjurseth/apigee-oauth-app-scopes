@@ -41,7 +41,7 @@
 		<description>${name}${description.suffix}</description>
 		<skipNode>true</skipNode>
 		<test.scheme>https</test.scheme>
-		<test.domain>${apigee.org}-${apigee.env}.apigee.net/scopecase/v1</test.domain>
+		<test.domain>${apigee.org}-${apigee.env}.apigee.net</test.domain>
 	</properties>
 	<profiles>
 		<profile>
@@ -196,18 +196,14 @@
 								<![CDATA[
 									def orgConfigDir = new File(project.properties.getProperty('apigee.config.dir'), 'org')
 									def exportDir = new File(project.properties.getProperty('apigee.config.exportDir'))
-									def developersFile = new File(orgConfigDir, 'developers.json')
-									def appsFile = new File(orgConfigDir, 'developerApps.json')
 									def keysFile = new File(exportDir, 'devAppKeys.json')
 									def jsonSlurper = new groovy.json.JsonSlurper() 
-									def developers = jsonSlurper.parseText(developersFile.text)
-									def apps = jsonSlurper.parseText(appsFile.text)
 									def keys = jsonSlurper.parseText(keysFile.text)
-									def developerEmail = developers[0].email
-									def appName = apps[developerEmail][0].name
-									def appDetails = keys.find { it.name == appName }
-									project.properties.setProperty('test.readWriteconsumerKey', appDetails.credentials[0].consumerKey)
-									project.properties.setProperty('test.readWriteconsumerSecret', appDetails.credentials[0].consumerSecret)
+
+                  keys.each {
+									  project.properties.setProperty('test.' + it.name + '.consumerKey', it.credentials[0].consumerKey)
+									  project.properties.setProperty('test.' + it.name + '.consumerSecret', it.credentials[0].consumerSecret)
+                  }
 								]]>
             					</script>
           					</scripts>
@@ -317,9 +313,9 @@
 						</goals>
 						<phase>install</phase>
 						<configuration>
-							<executable>node</executable>
+              <executable>node</executable>
 							<workingDirectory>test/integration</workingDirectory>
-							<commandlineArgs>./node_modules/cucumber/bin/cucumber-js --world-parameters '${worldParameters}' --format ./node_modules/cucumber-pretty -f json:report.json</commandlineArgs>
+              <commandlineArgs>./node_modules/cucumber/bin/cucumber-js --world-parameters '${worldParameters}' --format ./node_modules/cucumber-pretty -f json:report.json</commandlineArgs>
 						</configuration>
 					</execution>
 				</executions>
