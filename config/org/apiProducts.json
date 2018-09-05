@@ -1,6 +1,6 @@
 [
   {
-    "apiResources" : [ "/", "/**"  ],
+    "apiResources" : [ "/write" ],
     "approvalType" : "auto",
     "attributes" : [  ],
     "createdAt" : 1535395179323,
@@ -15,7 +15,7 @@
     "quota" : "5",
     "quotaInterval" : "1",
     "quotaTimeUnit" : "minute",
-    "scopes" : [ "urn:scopecase:read", "urn:scopecase:write"  ]
+    "scopes" : [ "urn:scopecase:write" ]
   },
   {
     "apiResources" : [ "/read"  ],

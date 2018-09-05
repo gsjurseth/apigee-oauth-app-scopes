@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "request-promise": "^4.2.2"
+  },
   "devDependencies": {
     "apickli": "^2.0.0",
     "cucumber": "^4.0.0",
