@@ -1,6 +1,6 @@
 [
   {
-    "apiResources" : [ "/write", "/" ],
+    "apiResources" : [ "/write" ],
     "approvalType" : "auto",
     "attributes" : [  ],
     "createdAt" : 1535395179323,
@@ -18,7 +18,7 @@
     "scopes" : [ "urn:scopecase:write" ]
   },
   {
-    "apiResources" : [ "/read", "/"  ],
+    "apiResources" : [ "/read" ],
     "approvalType" : "auto",
     "attributes" : [  ],
     "createdAt" : 1535395179323,

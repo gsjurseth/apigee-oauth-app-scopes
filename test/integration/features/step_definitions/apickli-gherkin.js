@@ -8,7 +8,6 @@ Given(/^I perform a client_credentials grant to (.*) with clientid (.*) and secr
         if (error) {
             callback(new Error(error));
         }
-
         callback();
     });
 });
