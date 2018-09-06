@@ -4,12 +4,6 @@
     <FaultRules/>
     <PreFlow name="PreFlow">
         <Request>
-            <Step>
-                <Name>remove-header-authorization</Name>
-            </Step>
-            <Step>
-                <Name>impose-quota</Name>
-            </Step>
         </Request>
         <Response/>
     </PreFlow>
