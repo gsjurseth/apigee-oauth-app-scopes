@@ -5,9 +5,6 @@
     <PreFlow name="PreFlow">
         <Request>
             <Step>
-                <Name>verify-oauth-v2-access-token</Name>
-            </Step>
-            <Step>
                 <Name>remove-header-authorization</Name>
             </Step>
             <Step>
@@ -23,7 +20,11 @@
     <Flows>
         <Flow name="read">
             <Description/>
-            <Request/>
+            <Request>
+              <Step>
+                  <Name>VerifyAccessTokenRead</Name>
+              </Step>
+            </Request>
             <Response>
                 <Step>
                     <Name>AssignMessage.SetPayload</Name>
@@ -33,7 +34,11 @@
         </Flow>
         <Flow name="write">
             <Description>write</Description>
-            <Request/>
+            <Request>
+              <Step>
+                  <Name>VerifyAccessTokenWrite</Name>
+              </Step>
+            </Request>
             <Response>
                 <Step>
                     <Name>AssignMessage.SetPayload</Name>
