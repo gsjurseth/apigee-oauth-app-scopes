@@ -8,11 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "request-promise": "^4.2.2"
-  },
   "devDependencies": {
-    "apickli": "^2.0.0",
+    "apickli": "^2.1.1",
     "cucumber": "^4.0.0",
     "cucumber-pretty": "^1.4.0",
     "lodash": "^4.17.10"

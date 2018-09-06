@@ -31,9 +31,3 @@ In addition to the deployment this setup will also run a number of integration t
 `/test/integration/features/scope-test.feature`
 
 These tests fetch a token and then use that token for the subsequent calls.
-
-*NOTE:*
-At this point i've had to make a change to apickli to get the tests to work. I'm working with Sean and
-Ozan to get that change officially rolled into apickli at which time I'll update this repo again and 
-all will work as designed. It does work on my own laptop, but i've made the change to apickli manually.
-
